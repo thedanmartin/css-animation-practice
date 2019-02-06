@@ -1,0 +1,120 @@
+/* this is where all of your CSS styles go */
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+.grid_container {
+	width: 500px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%; /* for optical centering */
+	margin-top: -50px;
+	margin-left: -100px;
+}
+
+.mono {
+	font-family: 'Fjalla One';
+	font-size: 6em;
+	float: left;
+	margin-left: 5px;
+}
+
+.w1	{
+
+	opacity: 0;
+	animation: w_fade 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+	
+}
+
+.e2 {
+
+	opacity: 0;
+	animation: w_fade 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+
+}
+
+.k	{
+
+	position: relative;
+	animation: k_move 2s;
+
+}
+
+.n	{
+
+	position: relative;
+	animation: n_move 2s linear;
+
+}
+
+.e1	{
+
+	position: relative;
+	animation: e1_move	2s linear;
+
+}
+
+.e3	{
+
+	position: relative;
+	animation:	e3_move 2s linear;
+
+}
+
+.exp {
+
+	animation: exp_fade 2s linear;
+
+}
+
+/* animation keyframes below */
+
+@keyframes w_fade	{
+
+	0%		{	opacity:	0; color: black;	}
+	100% 	{	opacity:	1; color: red;	}
+	
+}
+
+@keyframes k_move	{
+
+	0%, 100%		{	top:	0px;	}
+	50%					{	top:	-200px;	}
+
+}
+
+@keyframes n_move	{
+
+	0%, 100%		{	top:	0px;	}
+	25%					{	top:	-200px;	}
+	50%					{	top:	-200px;	left: -200px;	}
+
+}
+
+@keyframes e1_move {
+
+	0%, 100%		{	top: 0px;	}
+	50%					{	top: -200px;	left: 70px;	}	
+
+}
+
+@keyframes e3_move	{
+
+	0%, 100%		{	top:	0px;	}
+	50%					{ top: 	-200px;	left: -55px;	}
+
+}
+
+@keyframes exp_fade	{
+
+	0%, 100%		{opacity:	0;	color: 	white;	}
+	50%					{opacity: 1;	color: 	black;	}
+
+}
